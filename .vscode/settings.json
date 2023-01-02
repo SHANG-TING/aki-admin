@@ -1,0 +1,20 @@
+{
+  "cSpell.words": [
+    "antd",
+    "echarts",
+    "hocs",
+    "insta",
+    "Kanban",
+    "nrwl",
+    "popconfirm",
+    "Popconfirms",
+    "reduxjs",
+    "Sider",
+    "specifities",
+    "webp",
+    "Zipcode"
+  ],
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ]
+}
