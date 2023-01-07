@@ -21,7 +21,7 @@ export const SettingsOverlay: React.FC = ({ ...props }) => {
     <S.SettingsOverlayMenu mode="inline" selectable={false} {...props}>
       <DropdownCollapse
         bordered={false}
-        expandIconPosition="right"
+        expandIconPosition="start"
         ghost
         defaultActiveKey="themePicker"
       >
