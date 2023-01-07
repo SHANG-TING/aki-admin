@@ -63,6 +63,13 @@ export default createGlobalStyle`
     display: none;
   }
 
+  .ant-btn-text {
+    color: var(--text-main-color);
+    border-color: transparent;
+    background: 0 0;
+    box-shadow: none;
+  }
+
   .ant-picker-cell {
     color: var(--text-main-color);
   }
