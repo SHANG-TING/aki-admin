@@ -6,7 +6,7 @@ import { Alert } from '@app/components/common/Alert/Alert';
 import { Button } from '@app/components/common/buttons/Button/Button';
 import * as S from '@app/pages/uiComponentsPages//UIComponentsPage.styles';
 
-const Card = styled(S.Card)`
+const Card = styled((props) => <S.Card {...props} />)`
   .ant-card-body {
     flex-direction: column;
     align-items: flex-start;

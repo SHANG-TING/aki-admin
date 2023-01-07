@@ -22,7 +22,7 @@ const CategoryWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const SearchInput = styled(CommonSearchInput)`
+const SearchInput = styled((props) => <CommonSearchInput {...props} />)`
   .ant-input-search-button {
     height: 3.1rem;
   }

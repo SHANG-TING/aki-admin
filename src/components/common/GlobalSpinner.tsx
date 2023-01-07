@@ -108,7 +108,7 @@ interface GlobalSpinnerProps {
   size?: string;
 }
 
-export const GlobalSpinner = styled(SpinnerOriginal)<GlobalSpinnerProps>`
+export const GlobalSpinner = styled((props) => <SpinnerOriginal {...props} />)<GlobalSpinnerProps>`
   width: ${(props) => props.size || '8em'};
   height: ${(props) => props.size || '8em'};
 

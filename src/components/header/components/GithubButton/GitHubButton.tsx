@@ -22,7 +22,7 @@ export const GitHubButton: React.FC = (props) => {
   );
 };
 
-const Button = styled(BaseButton)<{ $isDark: boolean }>`
+const Button = styled((props) => <BaseButton {...props} />)<{ $isDark: boolean }>`
   color: ${(props) => BASE_COLORS[props.$isDark ? 'white' : 'black']};
   background: ${(props) => BASE_COLORS[props.$isDark ? 'black' : 'white']};
   border-radius: 50px;
@@ -39,7 +39,7 @@ const Button = styled(BaseButton)<{ $isDark: boolean }>`
   }
 `;
 
-const GithubIcon = styled(GithubOutlined)`
+const GithubIcon = styled((props) => <GithubOutlined {...props} />)`
   font-size: 1.5rem;
   vertical-align: middle;
 `;

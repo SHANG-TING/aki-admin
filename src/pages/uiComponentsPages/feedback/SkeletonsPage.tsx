@@ -14,7 +14,7 @@ import * as S from '@app/pages/uiComponentsPages//UIComponentsPage.styles';
 import { media } from '@app/styles/themes/constants';
 import { Switch } from '@app/components/common/Switch/Switch';
 
-const FormItem = styled(Form.Item)`
+const FormItem = styled((props) => <Form.Item {...props} />)`
   @media only screen and ${media.xs} {
     max-width: fit-content;
   }

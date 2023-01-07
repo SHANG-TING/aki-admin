@@ -9,7 +9,7 @@ import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
 import * as S from '@app/pages/uiComponentsPages//UIComponentsPage.styles';
 import { FONT_SIZE, media } from '@app/styles/themes/constants';
 
-const AsyncButton = styled(Button)`
+const AsyncButton = styled((props) => <Button {...props} />)`
   @media only screen and ${media.xs} {
     font-size: ${FONT_SIZE.xs};
   }

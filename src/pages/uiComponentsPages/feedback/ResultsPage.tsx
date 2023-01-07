@@ -7,13 +7,13 @@ import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
 import * as S from '@app/pages/uiComponentsPages//UIComponentsPage.styles';
 import { media } from '@app/styles/themes/constants';
 
-const Card = styled(S.Card)`
+const Card = styled((props) => <S.Card {...props} />)`
   .ant-card-body {
     justify-content: center;
   }
 `;
 
-const BuyButton = styled(Button)`
+const BuyButton = styled((props) => <Button {...props} />)`
   @media only screen and ${media.xs} {
     margin-top: 1rem;
   }

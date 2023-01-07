@@ -7,9 +7,9 @@ import { SettingsOverlay } from './settingsOverlay/SettingsOverlay/SettingsOverl
 
 export const SettingsDropdown: React.FC = () => {
   const [isOpened, setOpened] = useState(false);
-
+  const items = [{ key: 'item-1', label: <SettingsOverlay /> }];
   return (
-    <Dropdown overlay={<SettingsOverlay />} trigger={['click']} onVisibleChange={setOpened}>
+    <Dropdown menu={{ items }} trigger={['click']} onOpenChange={setOpened}>
       <HeaderActionWrapper>
         <Button type={isOpened ? 'ghost' : 'text'} icon={<SettingOutlined />} />
       </HeaderActionWrapper>

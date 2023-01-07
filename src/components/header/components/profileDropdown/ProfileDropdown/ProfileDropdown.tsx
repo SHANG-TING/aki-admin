@@ -7,13 +7,15 @@ import { useAppSelector } from '@app/hooks/reduxHooks';
 import { useResponsive } from '@app/hooks/useResponsive';
 import * as S from './ProfileDropdown.styles';
 
+const items = [{ key: 'item-1', label: <ProfileOverlay /> }];
+
 export const ProfileDropdown: React.FC = () => {
   const { isTablet } = useResponsive();
 
   const user = useAppSelector((state) => state.user.user);
 
   return user ? (
-    <Dropdown overlay={<ProfileOverlay />} trigger={['click']}>
+    <Dropdown menu={{ items }} trigger={['click']}>
       <S.ProfileDropdownHeader as={Row} gutter={[10, 10]} align="middle">
         <Col>
           <Avatar src={user.imgUrl} alt="User" shape="circle" size={40} />

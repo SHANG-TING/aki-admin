@@ -17,6 +17,6 @@ export const ActivityCard: React.FC = () => {
   );
 };
 
-const ActivityCardStyled = styled(Card)`
+const ActivityCardStyled = styled((props) => <Card {...props} />)`
   height: 100%;
 `;

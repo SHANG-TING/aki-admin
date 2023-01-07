@@ -14,7 +14,7 @@ export const PopoverButton = styled.div`
   gap: 5px;
 `;
 
-export const TopButtons = styled(PopoverButton)`
+export const TopButtons = styled((props) => <PopoverButton {...props} />)`
   white-space: nowrap;
 
   @media only screen and ${media.xs} {
@@ -25,13 +25,13 @@ export const TopButtons = styled(PopoverButton)`
     margin-left: ${buttonWidth + 18}px;
   }
 `;
-export const LeftButtons = styled(PopoverButton)`
+export const LeftButtons = styled((props) => <PopoverButton {...props} />)`
   flex-direction: column;
   width: ${buttonWidth}px;
   float: left;
 `;
 
-export const RightButtons = styled(PopoverButton)`
+export const RightButtons = styled((props) => <PopoverButton {...props} />)`
   flex-direction: column;
   width: ${buttonWidth}px;
 
@@ -44,7 +44,7 @@ export const RightButtons = styled(PopoverButton)`
   }
 `;
 
-export const BottomButtons = styled(PopoverButton)`
+export const BottomButtons = styled((props) => <PopoverButton {...props} />)`
   margin-left: ${buttonWidth}px;
   clear: both;
   whitespace: nowrap;

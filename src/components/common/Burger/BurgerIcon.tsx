@@ -17,7 +17,7 @@ export const Burger: React.FC<BurgerProps> = ({ className, onClick }) => (
   </svg>
 );
 
-export const BurgerIcon = styled(Burger)<{ isCross: boolean }>`
+export const BurgerIcon = styled((props) => <Burger {...props} />)<{ isCross: boolean }>`
   cursor: pointer;
   transform: translate3d(0, 0, 0);
 

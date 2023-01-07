@@ -40,6 +40,7 @@ const DropdownsPage: React.FC = () => {
       <MenuItem danger>{t('dropdowns.dangerItem')}</MenuItem>
     </Menu>
   );
+  const basicItems = [{ key: 'item-1', label: basicMenu }];
 
   const positionMenu = (
     <Menu>
@@ -60,12 +61,14 @@ const DropdownsPage: React.FC = () => {
       </MenuItem>
     </Menu>
   );
+  const positionItems = [{ key: 'item-1', label: positionMenu }];
+
   return (
     <>
       <PageTitle>{t('common.dropdown')}</PageTitle>
       <Col>
         <S.Card title={t('dropdowns.basic')}>
-          <Dropdown overlay={basicMenu}>
+          <Dropdown menu={{ items: basicItems }}>
             <Button onClick={(e) => e.preventDefault()}>
               {t('dropdowns.hoverMe')} <DownOutlined />
             </Button>
@@ -73,35 +76,55 @@ const DropdownsPage: React.FC = () => {
         </S.Card>
         <S.Card title={t('dropdowns.positions')}>
           <Space size={16} wrap>
-            <Dropdown overlay={positionMenu} placement="bottomLeft" arrow>
+            <Dropdown
+              menu={{ items: positionItems }}
+              placement="bottomLeft"
+              arrow
+            >
               <Button>{t('dropdowns.bl')}</Button>
             </Dropdown>
-            <Dropdown overlay={positionMenu} placement="bottomCenter" arrow>
+            <Dropdown
+              menu={{ items: positionItems }}
+              placement="bottomCenter"
+              arrow
+            >
               <Button>{t('dropdowns.bc')}</Button>
             </Dropdown>
-            <Dropdown overlay={positionMenu} placement="bottomRight" arrow>
+            <Dropdown
+              menu={{ items: positionItems }}
+              placement="bottomRight"
+              arrow
+            >
               <Button>{t('dropdowns.br')}</Button>
             </Dropdown>
-            <Dropdown overlay={positionMenu} placement="topLeft" arrow>
+            <Dropdown menu={{ items: positionItems }} placement="topLeft" arrow>
               <Button>{t('dropdowns.tl')}</Button>
             </Dropdown>
-            <Dropdown overlay={positionMenu} placement="topCenter" arrow>
+            <Dropdown
+              menu={{ items: positionItems }}
+              placement="topCenter"
+              arrow
+            >
               <Button>{t('dropdowns.tc')}</Button>
             </Dropdown>
-            <Dropdown overlay={positionMenu} placement="topRight" arrow>
+            <Dropdown
+              menu={{ items: positionItems }}
+              placement="topRight"
+              arrow
+            >
               <Button>{t('dropdowns.tr')}</Button>
             </Dropdown>
           </Space>
         </S.Card>
         <S.Card title={t('dropdowns.clickable')}>
-          <Dropdown overlay={positionMenu} trigger={['click']}>
+          <Dropdown menu={{ items: positionItems }} trigger={['click']}>
             <Button onClick={(e) => e.preventDefault()}>
               {t('dropdowns.clickMe')} <DownOutlined />
             </Button>
           </Dropdown>
         </S.Card>
         <S.Card title={t('dropdowns.context')}>
-          <Dropdown overlay={positionMenu} trigger={['contextMenu']}>
+          <Dropdown menu={{ items: positionItems }} trigger={['contextMenu']}>
             <ContextMenuWrapper>{t('dropdowns.rightClick')}</ContextMenuWrapper>
           </Dropdown>
         </S.Card>

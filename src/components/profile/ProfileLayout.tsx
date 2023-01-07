@@ -66,11 +66,11 @@ const ProfileLayout: React.FC = () => {
   );
 };
 
-const ProfileCard = styled(Card)`
+const ProfileCard = styled((props) => <Card {...props} />)`
   height: unset;
 `;
 
-const Btn = styled(Button)`
+const Btn = styled((props) => <Button {...props} />)`
   font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 600;

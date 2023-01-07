@@ -1,8 +1,25 @@
+import dotenv from 'dotenv';
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
+import react from '@vitejs/plugin-react';
+
+dotenv.config();
+
 export default defineConfig({
+  define: {
+    'process.env': JSON.stringify(process.env)
+  },
+
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    },
+  },
+
   server: {
     port: 4200,
     host: 'localhost',
@@ -13,6 +30,7 @@ export default defineConfig({
     viteTsConfigPaths({
       root: './',
     }),
+    svgr(),
   ],
 
   test: {

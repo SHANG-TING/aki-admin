@@ -21,19 +21,20 @@ export const Carousel = React.forwardRef<Slider, Settings>(
     ref
   ) => {
     const carouselRef = useRef<Slider>();
-
-    const totalRef = ref || carouselRef;
+    const totalRef = (ref || carouselRef) as React.MutableRefObject<
+      Slider | undefined
+    >;
 
     const handleScroll = useCallback(
-      (event) => {
+      (event: WheelEvent) => {
         const x = event.deltaX;
         const y = event.deltaY;
 
-        if (x > 20 && -5 < y < 5) {
+        if (x > 20 && -5 < y && y < 5) {
           return totalRef?.current?.slickNext();
         }
 
-        if (x < -20 && -5 < y < 5) {
+        if (x < -20 && -5 < y && y < 5) {
           return totalRef?.current?.slickPrev();
         }
       },
@@ -52,25 +53,25 @@ export const Carousel = React.forwardRef<Slider, Settings>(
       if (totalRef.current) {
         const slickList = totalRef.current?.innerSlider?.list;
 
-        slickList.addEventListener('wheel', handleScroll);
+        slickList?.addEventListener('wheel', handleScroll);
 
-        slickList.addEventListener('mouseover', handleMouseOn);
+        slickList?.addEventListener('mouseover', handleMouseOn);
 
-        slickList.addEventListener('mouseout', handleMouseOff);
+        slickList?.addEventListener('mouseout', handleMouseOff);
 
         return () => {
-          slickList.removeEventListener('wheel', handleScroll);
+          slickList?.removeEventListener('wheel', handleScroll);
 
-          slickList.removeEventListener('mouseover', handleMouseOn);
+          slickList?.removeEventListener('mouseover', handleMouseOn);
 
-          slickList.removeEventListener('mouseout', handleMouseOff);
+          slickList?.removeEventListener('mouseout', handleMouseOff);
         };
       }
     }, [totalRef, handleScroll, handleMouseOn, handleMouseOff]);
 
     return (
       <Slider
-        ref={totalRef}
+        ref={totalRef as React.MutableRefObject<Slider>}
         slidesToShow={slidesToShow}
         arrows={arrows}
         dots={dots}

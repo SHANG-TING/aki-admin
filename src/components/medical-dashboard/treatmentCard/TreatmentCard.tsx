@@ -92,17 +92,17 @@ export const TreatmentCard: React.FC = () => {
   );
 };
 
-const BackButtonWrapper = styled(Col)`
+const BackButtonWrapper = styled((props) => <Col {...props} />)`
   position: relative;
 `;
 
-const BackButton = styled(Button)`
+const BackButton = styled((props) => <Button {...props} />)`
   position: absolute;
   top: 0;
   left: 0;
   color: var(--white);
 `;
 
-const RowStyled = styled(Row)`
+const RowStyled = styled((props) => <Row {...props} />)`
   min-height: 21.75rem;
 `;

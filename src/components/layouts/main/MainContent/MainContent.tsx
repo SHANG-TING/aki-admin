@@ -8,7 +8,7 @@ interface HeaderProps {
   $isTwoColumnsLayout: boolean;
 }
 
-export default styled(Content)<HeaderProps>`
+export default styled((props) => <Content {...props} />)<HeaderProps>`
   padding: ${LAYOUT.mobile.paddingVertical} ${LAYOUT.mobile.paddingHorizontal};
   overflow: auto;
   display: flex;
