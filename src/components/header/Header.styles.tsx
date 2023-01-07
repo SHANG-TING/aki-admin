@@ -31,7 +31,7 @@ export const HeaderActionWrapper = styled.div`
   }
 `;
 
-export const DropdownCollapse = styled((props) => <Collapse {...props} />)`
+export const DropdownCollapse = styled(Collapse)`
   & > .ant-collapse-item > .ant-collapse-header {
     font-weight: 600;
     font-size: 0.875rem;

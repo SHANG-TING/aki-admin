@@ -1,10 +1,13 @@
 import React from 'react';
-import { NightTimePicker } from './NightTimePicker/NightTimePicker';
-import { Switch } from '@app/components/common/Switch/Switch';
-import styled from 'styled-components';
+
 import { useTranslation } from 'react-i18next';
+import styled from 'styled-components';
+
+import { Switch } from '@app/components/common/Switch/Switch';
 import { useAppDispatch, useAppSelector } from '@app/hooks/reduxHooks';
 import { setNightMode, setNightTime } from '@app/store/slices/nightModeSlice';
+
+import { NightTimePicker } from './NightTimePicker/NightTimePicker';
 
 export const NightModeSettings: React.FC = () => {
   const { t } = useTranslation();
@@ -26,9 +29,16 @@ export const NightModeSettings: React.FC = () => {
     <>
       <SwitchContainer>
         <span>{t('common.auto')}</span>
-        <Switch checkedChildren="On" unCheckedChildren="Off" checked={isNightMode} onChange={handleChange} />
+        <Switch
+          checkedChildren="On"
+          unCheckedChildren="Off"
+          checked={isNightMode}
+          onChange={handleChange}
+        />
       </SwitchContainer>
-      {isNightMode && <NightTimePicker nightTime={nightTime} setNightTime={handleNightTime} />}
+      {isNightMode && (
+        <NightTimePicker nightTime={nightTime} setNightTime={handleNightTime} />
+      )}
     </>
   );
 };
