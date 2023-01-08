@@ -1,11 +1,13 @@
 import React from 'react';
+
+import { graphic } from 'echarts/core';
 import { useTranslation } from 'react-i18next';
-import * as echarts from 'echarts';
-import { BaseChart } from '@app/components/common/charts/BaseChart';
+
 import { Card } from '@app/components/common/Card/Card';
+import { BaseChart } from '@app/components/common/charts/BaseChart';
 import { useAppSelector } from '@app/hooks/reduxHooks';
-import { themeObject } from '@app/styles/themes/themeVariables';
 import { FONT_SIZE, FONT_WEIGHT } from '@app/styles/themes/constants';
+import { themeObject } from '@app/styles/themes/themeVariables';
 
 export const GradientStackedAreaChart: React.FC = () => {
   const { t } = useTranslation();
@@ -22,7 +24,9 @@ export const GradientStackedAreaChart: React.FC = () => {
       },
     },
     legend: {
-      data: [`coal`, `hydro`, `nuclear`, `gas`, `oil`].map((item) => t(`charts.${item}`)),
+      data: [`coal`, `hydro`, `nuclear`, `gas`, `oil`].map((item) =>
+        t(`charts.${item}`)
+      ),
       top: 0,
       left: 10,
       textStyle: {
@@ -71,7 +75,7 @@ export const GradientStackedAreaChart: React.FC = () => {
         showSymbol: false,
         areaStyle: {
           opacity: 0.8,
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
               color: themeObject[theme].chartColor1,
@@ -98,7 +102,7 @@ export const GradientStackedAreaChart: React.FC = () => {
         showSymbol: false,
         areaStyle: {
           opacity: 0.8,
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
               color: themeObject[theme].chartColor2,
@@ -125,7 +129,7 @@ export const GradientStackedAreaChart: React.FC = () => {
         showSymbol: false,
         areaStyle: {
           opacity: 0.8,
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
               color: themeObject[theme].chartColor3,
@@ -152,7 +156,7 @@ export const GradientStackedAreaChart: React.FC = () => {
         showSymbol: false,
         areaStyle: {
           opacity: 0.8,
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
               color: themeObject[theme].chartColor4,
@@ -183,7 +187,7 @@ export const GradientStackedAreaChart: React.FC = () => {
         },
         areaStyle: {
           opacity: 0.8,
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0.4,
               color: themeObject[theme].chartColor5,

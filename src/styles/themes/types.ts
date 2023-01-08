@@ -1,4 +1,4 @@
-import { LinearGradientObject } from 'echarts';
+import { LinearGradientObject } from 'echarts/core';
 
 export interface ITheme {
   primary: string;

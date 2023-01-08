@@ -1,11 +1,14 @@
 import React from 'react';
-import { DropdownCollapse } from '@app/components/header/Header.styles';
+
 import { useTranslation } from 'react-i18next';
+
+import { Button } from '@app/components/common/buttons/Button/Button';
+import { DropdownCollapse } from '@app/components/header/Header.styles';
+import { useAppSelector } from '@app/hooks/reduxHooks';
+
 import { LanguagePicker } from '../LanguagePicker/LanguagePicker';
 import { NightModeSettings } from '../nightModeSettings/NightModeSettings';
 import { ThemePicker } from '../ThemePicker/ThemePicker';
-import { Button } from '@app/components/common/buttons/Button/Button';
-import { useAppSelector } from '@app/hooks/reduxHooks';
 import * as S from './SettingsOverlay.styles';
 
 type BeforeInstallPromptEvent = {

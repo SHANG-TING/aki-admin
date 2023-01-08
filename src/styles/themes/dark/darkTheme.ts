@@ -1,5 +1,7 @@
+import { graphic } from 'echarts/core';
+
 import { shadeColor } from '@app/utils/utils';
-import { graphic } from 'echarts';
+
 import { BASE_COLORS } from '../constants';
 import { ITheme } from '../types';
 

@@ -1,11 +1,17 @@
-import React, { CSSProperties, useEffect, useState } from 'react';
-import { EChartsOption } from 'echarts-for-react';
-import ReactECharts from 'echarts-for-react';
-import { Loading } from '../Loading';
+import React, {
+  CSSProperties,
+  useEffect,
+  useState,
+} from 'react';
+
+import ReactECharts, { EChartsOption } from 'echarts-for-react';
+
 import { useAppSelector } from '@app/hooks/reduxHooks';
+import { BORDER_RADIUS } from '@app/styles/themes/constants';
 import { themeObject } from '@app/styles/themes/themeVariables';
 import { ITheme } from '@app/styles/themes/types';
-import { BORDER_RADIUS } from '@app/styles/themes/constants';
+
+import { Loading } from '../Loading';
 
 export interface BaseChartProps {
   option?: EChartsOption;
