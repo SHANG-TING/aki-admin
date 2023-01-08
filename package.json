@@ -49,6 +49,7 @@
     "nx": "15.4.1",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.2.0",
+    "rollup-plugin-visualizer": "^5.9.0",
     "typescript": "~4.8.2",
     "vite": "^4.0.1",
     "vite-plugin-eslint": "^1.8.1",

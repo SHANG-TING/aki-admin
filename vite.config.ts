@@ -1,5 +1,9 @@
 import dotenv from 'dotenv';
-import { defineConfig } from 'vite';
+import visualizer from 'rollup-plugin-visualizer';
+import {
+  defineConfig,
+  type PluginOption,
+} from 'vite';
 import svgr from 'vite-plugin-svgr';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
@@ -9,7 +13,7 @@ dotenv.config();
 
 export default defineConfig({
   define: {
-    'process.env': JSON.stringify(process.env)
+    'process.env': JSON.stringify(process.env),
   },
 
   css: {
@@ -31,6 +35,9 @@ export default defineConfig({
       root: './',
     }),
     svgr(),
+    visualizer({
+      filename: 'dist/aki-admin/stats.html'
+    }) as PluginOption,
   ],
 
   test: {
