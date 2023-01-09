@@ -1,4 +1,5 @@
 {
+  "title": "AKI ERP",
   "alerts": {
     "accept": "Accept",
     "basic": "Basic alert",
@@ -234,83 +235,6 @@
     "warning": "Warning",
     "zipcode": "Zipcode",
     "delete": "Delete"
-  },
-  "medical-dashboard": {
-    "activity": {
-      "kcalBurned": "kcal burned on",
-      "title": "Activity"
-    },
-    "bloodScreening": {
-      "flag": "Flag",
-      "high": "HIGH",
-      "low": "LOW",
-      "norm": "NORM",
-      "result": "Result",
-      "test": "Test",
-      "title": "Blood screening",
-      "units": "Units"
-    },
-    "bones": "Bones",
-    "covid": {
-      "casesPerDay": "cases/day",
-      "deaths": "deaths",
-      "title": "Real COVID-19 Statistics"
-    },
-    "fat": "Fat",
-    "favoriteDoctors": {
-      "lastVisit": "Last visit",
-      "title": "Favorite doctors"
-    },
-    "health": {
-      "ecology": {
-        "description": "The environment is a major determinant of health, estimated to account for almost 20% of all deaths in the WHO European Region.",
-        "title": "Ecology"
-      },
-      "genetics": {
-        "description": "Multivariate studies show that genetic factors enhancing SWB are partly overlapping with those protecting against depression and other mental health problems.",
-        "title": "Genetics"
-      },
-      "lifestyle": {
-        "description": "According to WHO, 60% of related factors to individual health and quality of life are correlated to lifestyle.",
-        "title": "Lifestyle"
-      },
-      "medicine": {
-        "description": "Relationship between health insurance (or lack of insurance), use of medical care and health outcomes for specific conditions and types of services, and with overall health status and mortality.",
-        "title": "Medicine"
-      },
-      "title": "Health"
-    },
-    "latestScreenings": {
-      "friends": "Friends",
-      "month": "Month",
-      "statistics": "Statistics",
-      "title": "Latest screenings"
-    },
-    "map": {
-      "polyclinic": "Polyclinic"
-    },
-    "news": "News",
-    "patientResults": {
-      "patientAdmission": {
-        "description": "Admission of a patient means allowing and facilitating a patient to stay in the hospital unit or ward for observation, investigation, and treatment of the disease he or she is suffering from.",
-        "title": "Patient admission"
-      },
-      "patientDischarge": {
-        "description": "A hospital will discharge you when you no longer need to receive inpatient care and can go home. Or, a hospital will discharge you to send you to another type of facility.",
-        "title": "Patient's discharge"
-      },
-      "title": "Patient timeline",
-      "treatmentStarts": {
-        "description": "Part of the evaluation and treatment of any patient, regardless of condition or diagnosis, is an appropriate framework or pathway for diagnosis, treatment, and, if necessary, referral for specialty care.",
-        "title": "Treatment starts"
-      }
-    },
-    "protein": "Protein",
-    "treatmentPlan": {
-      "noVisits": "No visits for that day",
-      "title": "Treatment plan"
-    },
-    "water": "Water"
   },
   "dataDisplay": {
     "avatars": {

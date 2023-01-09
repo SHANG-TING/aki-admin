@@ -6,9 +6,7 @@ import styled from 'styled-components';
 
 import { UserOutlined } from '@ant-design/icons';
 import { AutoComplete } from '@app/components/common/AutoComplete/AutoComplete';
-import {
-  SearchInput as CommonSearchInput,
-} from '@app/components/common/inputs/SearchInput/SearchInput';
+import { SearchInput as CommonSearchInput } from '@app/components/common/inputs/SearchInput/SearchInput';
 import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
 import { Option } from '@app/components/common/selects/Select/Select';
 import * as S from '@app/pages/uiComponentsPages/UIComponentsPage.styles';
@@ -42,19 +40,29 @@ const AutoCompletesPage: React.FC = () => {
     if (!value || value.indexOf('@') >= 0) {
       res = [];
     } else {
-      res = ['gmail.com', '163.com', 'qq.com'].map((domain) => `${value}@${domain}`);
+      res = ['gmail.com', '163.com', 'qq.com'].map(
+        (domain) => `${value}@${domain}`
+      );
     }
     setResult(res);
   };
 
   const handleSearch = (searchText: string) => {
-    setOptions(!searchText ? [] : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)]);
+    setOptions(
+      !searchText
+        ? []
+        : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)]
+    );
   };
 
   const renderTitle = (title: string) => (
     <span>
       {title}
-      <Link href="https://www.google.com/search?q=antd" target="_blank" rel="noopener noreferrer">
+      <Link
+        href="https://www.google.com/search?q=antd"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         more
       </Link>
     </span>
@@ -75,7 +83,10 @@ const AutoCompletesPage: React.FC = () => {
   const categories = [
     {
       label: renderTitle(t('autoCompletes.libraries')),
-      options: [renderItem(t('autoCompletes.antDesign'), 10000), renderItem(t('autoCompletes.antDesignUI'), 10600)],
+      options: [
+        renderItem(t('autoCompletes.antDesign'), 10000),
+        renderItem(t('autoCompletes.antDesignUI'), 10600),
+      ],
     },
     {
       label: renderTitle(t('autoCompletes.solutions')),
@@ -121,9 +132,12 @@ const AutoCompletesPage: React.FC = () => {
         </S.Card>
         <S.Card title={t('autoCompletes.categories')}>
           <label>
-            <AutoComplete dropdownClassName="certain-category-search-dropdown" options={categories}>
-              <SearchInput placeholder={t('autoCompletes.inputHere') ?? ''} prefix={null} />
-            </AutoComplete>
+            <AutoComplete
+              style={{ width: 200 }}
+              popupClassName="certain-category-search-dropdown"
+              options={categories}
+              placeholder={t('autoCompletes.inputHere')}
+            ></AutoComplete>
           </label>
         </S.Card>
       </Col>

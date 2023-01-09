@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spin, InputRef } from 'antd';
+import { Spin, InputRef, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import { InputProps } from '../Input/Input';
 import * as S from './SearchInput.styles';
@@ -17,7 +17,7 @@ interface SearchInputProps extends InputProps {
 
 export const SearchInput = React.forwardRef<InputRef, SearchInputProps>(({ loading, filter, ...props }, ref) => {
   return (
-    <S.SearchInput
+    <Input.Search
       ref={ref}
       prefix={<SearchOutlined />}
       {...(filter && {

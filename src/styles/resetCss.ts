@@ -22,6 +22,7 @@ export const resetCss = css`
 
   body {
     font-weight: 500;
+    color: #fff;
   }
 
   img {

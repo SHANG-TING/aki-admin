@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Input as AntInput } from 'antd';
 import { FONT_WEIGHT, FONT_SIZE } from '@app/styles/themes/constants';
 
-export const Input = styled((props) => <AntInput {...props} />)`
+export const Input = styled(AntInput)`
   .ant-input-group-addon:first-child,
   .ant-input-group-addon:last-child {
     min-width: 5.5rem;

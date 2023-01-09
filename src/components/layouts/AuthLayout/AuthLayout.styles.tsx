@@ -1,11 +1,17 @@
+import { Button, Checkbox } from 'antd';
 import styled from 'styled-components';
-import { Checkbox, Button } from 'antd';
+
 import { LeftOutlined } from '@ant-design/icons';
+import loginBackground from '@app/assets/images/login-bg.webp';
 import { BaseForm } from '@app/components/common/forms/BaseForm/BaseForm';
 import { Input as CommonInput } from '@app/components/common/inputs/Input/Input';
 import { InputPassword as CommonInputPassword } from '@app/components/common/inputs/InputPassword/InputPassword';
-import loginBackground from '@app/assets/images/login-bg.webp';
-import { BORDER_RADIUS, FONT_SIZE, FONT_WEIGHT, media } from '@app/styles/themes/constants';
+import {
+  BORDER_RADIUS,
+  FONT_SIZE,
+  FONT_WEIGHT,
+  media,
+} from '@app/styles/themes/constants';
 
 export const Wrapper = styled.div`
   height: 100vh;
@@ -76,7 +82,7 @@ export const FormTitle = styled.div`
   }
 `;
 
-export const FormCheckbox = styled((props) => <Checkbox {...props} />)`
+export const FormCheckbox = styled(Checkbox)`
   display: flex;
   padding-left: 0.125rem;
 
@@ -111,7 +117,7 @@ export const FormItem = styled((props) => <BaseForm.Item {...props} />)`
   }
 `;
 
-export const FormInput = styled((props) => <CommonInput {...props} />)`
+export const FormInput = styled(CommonInput)`
   color: var(--text-main-color);
   background: transparent;
 
@@ -120,7 +126,7 @@ export const FormInput = styled((props) => <CommonInput {...props} />)`
   }
 `;
 
-export const FormInputPassword = styled((props) => <CommonInputPassword {...props} />)`
+export const FormInputPassword = styled(CommonInputPassword)`
   color: var(--text-main-color);
   background: transparent;
 

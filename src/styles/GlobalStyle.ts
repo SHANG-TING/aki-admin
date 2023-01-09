@@ -63,6 +63,12 @@ export default createGlobalStyle`
     display: none;
   }
 
+  .ant-alert, body {
+    margin: 0;
+    color: var(--text-main-color);
+    font-size: 16px
+  }
+
   .ant-btn-text {
     color: var(--text-main-color);
     border-color: transparent;

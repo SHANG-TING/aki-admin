@@ -1,9 +1,10 @@
+import { Steps as AntdSteps } from 'antd';
 import styled from 'styled-components';
-import { Select as CommonSelect } from '@app/components/common/selects/Select/Select';
+
 import { Button } from '@app/components/common/buttons/Button/Button';
 import { BaseForm } from '@app/components/common/forms/BaseForm/BaseForm';
+import { Select as CommonSelect } from '@app/components/common/selects/Select/Select';
 import { FONT_SIZE, FONT_WEIGHT } from '@app/styles/themes/constants';
-import { Steps as AntdSteps } from 'antd';
 
 export const PhoneItem = styled((props) => <BaseForm.Item {...props} />)`
   .ant-input-group-addon {
@@ -15,12 +16,18 @@ export const PhoneItem = styled((props) => <BaseForm.Item {...props} />)`
   }
 `;
 
-export const Steps = styled((props) => <AntdSteps {...props} />)`
-  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+export const Steps = styled(AntdSteps)`
+  .ant-steps-item-process
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-title {
     color: var(--primary-color);
   }
 
-  .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  .ant-steps-item-wait
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-title {
     color: var(--subtext-color);
   }
 

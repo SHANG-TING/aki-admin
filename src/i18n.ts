@@ -1,25 +1,21 @@
 import i18n from 'i18next';
+import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next';
 
-import translationEN from './locales/en/translation.json';
-import translationDE from './locales/de/translation.json';
+i18n
+  .use(
+    resourcesToBackend(
+      (language: string, namespace: string) =>
+        import(`./locales/${language}/${namespace}.json`)
+    )
+  )
+  .use(initReactI18next)
+  .init({
+    lng: 'zh-TW',
 
-const resources = {
-  en: {
-    translation: translationEN,
-  },
-  de: {
-    translation: translationDE,
-  },
-};
-
-i18n.use(initReactI18next).init({
-  resources,
-  lng: 'en',
-
-  interpolation: {
-    escapeValue: false,
-  },
-});
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
 export default i18n;

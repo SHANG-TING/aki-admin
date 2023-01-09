@@ -94,11 +94,11 @@ export const ValidationForm: React.FC = () => {
         <span> {t('forms.validationFormLabels.machines')}</span>
       </BaseButtonsForm.Item>
 
-      <BaseButtonsForm.Item name="switch" label={t('forms.validationFormLabels.switch')} valuePropName="checked">
+      {/* <BaseButtonsForm.Item name="switch" label={t('forms.validationFormLabels.switch')} valuePropName="checked">
         <Switch />
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
 
-      <BaseButtonsForm.Item name="slider" label={t('forms.validationFormLabels.slider')}>
+      {/* <BaseButtonsForm.Item name="slider" label={t('forms.validationFormLabels.slider')}>
         <Slider
           tooltipVisible={false}
           marks={{
@@ -110,17 +110,17 @@ export const ValidationForm: React.FC = () => {
             100: 'F',
           }}
         />
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
 
-      <BaseButtonsForm.Item name="radio-group" label={t('forms.validationFormLabels.radioGroup')}>
+      {/* <BaseButtonsForm.Item name="radio-group" label={t('forms.validationFormLabels.radioGroup')}>
         <RadioGroup>
           <Radio value="a">{t('forms.validationFormLabels.item')} 1</Radio>
           <Radio value="b">{t('forms.validationFormLabels.item')} 2</Radio>
           <Radio value="c">{t('forms.validationFormLabels.item')} 3</Radio>
         </RadioGroup>
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
 
-      <BaseButtonsForm.Item
+      {/* <BaseButtonsForm.Item
         name="radio-button"
         label={t('forms.validationFormLabels.radioButton')}
         rules={[{ required: true, message: t('forms.validationFormLabels.itemError') }]}
@@ -130,9 +130,9 @@ export const ValidationForm: React.FC = () => {
           <RadioButton value="b">{t('forms.validationFormLabels.item')} 2</RadioButton>
           <RadioButton value="c">{t('forms.validationFormLabels.item')} 3</RadioButton>
         </RadioGroup>
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
 
-      <BaseButtonsForm.Item name="checkbox-group" label={t('forms.validationFormLabels.checkboxGroup')}>
+      {/* <BaseButtonsForm.Item name="checkbox-group" label={t('forms.validationFormLabels.checkboxGroup')}>
         <CheckboxGroup>
           <Row>
             <Col span={8}>
@@ -157,13 +157,13 @@ export const ValidationForm: React.FC = () => {
             </Col>
           </Row>
         </CheckboxGroup>
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
 
-      <BaseButtonsForm.Item name="rate" label={t('forms.validationFormLabels.rate')}>
+      {/* <BaseButtonsForm.Item name="rate" label={t('forms.validationFormLabels.rate')}>
         <Rate />
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
 
-      <BaseButtonsForm.Item
+      {/* <BaseButtonsForm.Item
         name="upload"
         label={t('forms.validationFormLabels.upload')}
         valuePropName="fileList"
@@ -174,9 +174,9 @@ export const ValidationForm: React.FC = () => {
             {t('forms.validationFormLabels.clickToUpload')}
           </Button>
         </Upload>
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
 
-      <BaseButtonsForm.Item label={t('forms.validationFormLabels.dragger')}>
+      {/* <BaseButtonsForm.Item label={t('forms.validationFormLabels.dragger')}>
         <BaseButtonsForm.Item name="dragger" valuePropName="fileList" getValueFromEvent={normFile} noStyle>
           <UploadDragger name="files" action="/upload.do">
             <p>
@@ -186,7 +186,7 @@ export const ValidationForm: React.FC = () => {
             <p>{t('forms.validationFormLabels.supportSingle')}</p>
           </UploadDragger>
         </BaseButtonsForm.Item>
-      </BaseButtonsForm.Item>
+      </BaseButtonsForm.Item> */}
     </BaseButtonsForm>
   );
 };

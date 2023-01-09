@@ -169,7 +169,7 @@ const PopconfirmsPage: React.FC = () => {
         <S.Card title={t('popconfirm.async')}>
           <Popconfirm
             title={t('popovers.title')}
-            visible={visible}
+            open={visible}
             onConfirm={handleOk}
             okButtonProps={{ loading: confirmLoading }}
             onCancel={() => setVisible(false)}

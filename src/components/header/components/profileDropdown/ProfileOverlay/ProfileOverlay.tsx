@@ -31,6 +31,6 @@ export const ProfileOverlay: React.FC = ({ ...props }) => {
   ];
 
   return (
-    <DropdownMenu selectable={false} menu={{ items }} {...props}></DropdownMenu>
+    <DropdownMenu selectable={false} items={items} {...props}></DropdownMenu>
   );
 };

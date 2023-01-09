@@ -7,6 +7,7 @@ import { useAppSelector } from '@app/hooks/reduxHooks';
 import { useResponsive } from '@app/hooks/useResponsive';
 
 import * as S from './MainSider/MainSider.styles';
+import { useTranslation } from 'react-i18next';
 
 interface SiderLogoProps {
   isSiderCollapsed: boolean;
@@ -19,14 +20,14 @@ export const SiderLogo: React.FC<SiderLogoProps> = ({
   const { tabletOnly } = useResponsive();
 
   const theme = useAppSelector((state) => state.theme.theme);
-
+  const { t } = useTranslation();
   const img = theme === 'dark' ? logoDark : logo;
 
   return (
     <S.SiderLogoDiv>
       <S.SiderLogoLink to="/">
         <img src={img} alt="Lightence" width={48} height={48} />
-        <S.BrandSpan>Lightence</S.BrandSpan>
+        <S.BrandSpan>{t('title')}</S.BrandSpan>
       </S.SiderLogoLink>
       {tabletOnly && (
         <S.CollapseButton

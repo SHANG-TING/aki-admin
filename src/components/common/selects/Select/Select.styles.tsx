@@ -14,7 +14,7 @@ export interface SelectProps {
   shadow?: boolean;
 }
 
-export const Select = styled((props) => <AntSelect {...props} />).withConfig({
+export const Select = styled(AntSelect).withConfig({
   shouldForwardProp: (prop) => !['shadow', 'width'].includes(prop.toString()),
 })<SelectProps>`
   width: ${(props) => props.width && normalizeProp(props.width)};

@@ -16,20 +16,19 @@ export const NotificationsDropdown: React.FC = () => {
     useState<Notification[]>(fetchedNotifications);
   const [isOpened, setOpened] = useState(false);
 
-  const items = [
-    {
-      key: 'item-1',
-      label: (
+  return (
+    <Dropdown
+      dropdownRender={() => (
         <NotificationsOverlay
           notifications={notifications}
           setNotifications={setNotifications}
         />
-      ),
-    },
-  ];
-
-  return (
-    <Dropdown trigger={['click']} menu={{ items }} onOpenChange={setOpened}>
+      )}
+      getPopupContainer={() => document.body}
+      placement="bottomRight"
+      trigger={['click']}
+      onOpenChange={setOpened}
+    >
       <HeaderActionWrapper>
         <Button
           type={isOpened ? 'ghost' : 'text'}

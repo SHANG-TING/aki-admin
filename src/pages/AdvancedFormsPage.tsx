@@ -24,17 +24,17 @@ const AdvancedFormsPage: React.FC = () => {
           <Row gutter={[30, 30]}>
             <Col span={24}>
               <Card id="control-form" title={t('forms.controlForm')} padding="1.25rem">
-                <ControlForm />
+                {/* <ControlForm /> */}
               </Card>
             </Col>
             <Col span={24}>
               <Card id="dynamic-form" title={t('forms.dynamicForm')} padding="1.25rem">
-                <DynamicForm />
+                {/* <DynamicForm /> */}
               </Card>
             </Col>
             <Col span={24}>
               <Card id="step-form" title={t('forms.stepForm')} padding="1.25rem">
-                <StepForm />
+                {/* <StepForm /> */}
               </Card>
             </Col>
           </Row>
