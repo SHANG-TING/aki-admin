@@ -119,6 +119,8 @@ const NotificationsUIPage = React.lazy(
   () => import('@app/pages/uiComponentsPages/feedback/NotificationsPage')
 );
 const Logout = React.lazy(() => import('./Logout'));
+const ArtworkListPage = React.lazy(() => import('@app/pages/artworkPages/ArtworkListPage'));
+const ArtworkDetailPage = React.lazy(() => import('@app/pages/artworkPages/ArtworkDetailPage'));
 
 export const NFT_DASHBOARD_PATH = '/';
 
@@ -170,6 +172,9 @@ const Payments = withLoading(PaymentsPage);
 const AuthLayoutFallback = withLoading(AuthLayout);
 const LogoutFallback = withLoading(Logout);
 
+const ArtworkList = withLoading(ArtworkListPage);
+const ArtworkDetail = withLoading(ArtworkDetailPage);
+
 export const AppRouter: React.FC = () => {
   const protectedLayout = (
     <RequireAuth>
@@ -182,6 +187,11 @@ export const AppRouter: React.FC = () => {
       <Routes>
       <Route path={NFT_DASHBOARD_PATH} element={protectedLayout}>
           <Route index element={<NftDashboard />} />
+          <Route path="artworks">
+            <Route path="" element={<ArtworkList />}></Route>
+            <Route path="create" element={<ArtworkDetail />}></Route>
+            <Route path=":id" element={<ArtworkDetail />}></Route>
+          </Route>
           <Route path="apps">
             <Route path="feed" element={<NewsFeed />} />
           </Route>

@@ -8,7 +8,7 @@ interface BtnProps {
   $noStyle?: boolean;
 }
 
-export const Button = styled((props) => <AntButton {...props} />)<BtnProps>`
+export const Button = styled(AntButton)<BtnProps>`
   display: flex;
   align-items: center;
   justify-content: center;

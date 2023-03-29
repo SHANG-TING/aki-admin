@@ -1,28 +1,36 @@
+import { Input, Space as AntSpace } from 'antd';
+import { SearchProps } from 'antd/lib/input';
 import styled from 'styled-components';
-import { Space as AntSpace, Input } from 'antd';
+
 import { FONT_SIZE, FONT_WEIGHT, media } from '@app/styles/themes/constants';
 
 const { Search } = Input;
 
-export const SearchInput = styled((props) => <Search {...props} />)`
+export const SearchInput = styled((props: SearchProps) => (
+  <Search {...props} />
+))`
   & .ant-input-prefix {
     margin: 0.5rem;
   }
 
   & .ant-input-search-button {
-    height: 3.54875rem;
+    height: 3.1275rem;
     box-shadow: none;
   }
 
+  &.ant-input-search-small .ant-input-search-button {
+    height: 1.975rem;
+  }
+
   &.ant-input-search-large .ant-input-search-button {
-    height: 4.36125rem;
+    height: 4rem;
   }
 
   & input {
     font-weight: 600;
     background-color: var(--background-color);
 
-    @media only screen and ${media.md} {
+    @media only screen and (${media.md}) {
       font-size: 1rem;
     }
 

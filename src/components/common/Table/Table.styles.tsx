@@ -38,7 +38,9 @@ export const Table = styled((props) => <AntdTable {...props} />)`
   .ant-pagination-next,
   .ant-pagination-jump-prev,
   .ant-pagination-jump-next,
-  .ant-pagination-item {
+  .ant-pagination-item,
+  .ant-select-single .ant-select-selector,
+  .ant-select-single .ant-select-selector .ant-select-selection-item {
     min-width: 2.0625rem;
     height: 2.0625rem;
     line-height: 2.0625rem;
@@ -84,5 +86,9 @@ export const Table = styled((props) => <AntdTable {...props} />)`
     .ant-pagination-item a {
       color: var(--disabled-color);
     }
+  }
+
+  .ant-pagination-options .ant-select-arrow {
+    color: var(--text-main-color);
   }
 `;

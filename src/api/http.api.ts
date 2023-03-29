@@ -20,7 +20,7 @@ httpApi.interceptors.response.use(
   undefined,
   (error: AxiosError<{ message: string }>) => {
     throw new ApiError<ApiErrorData>(
-      error.response?.data.message || error.message,
+      error.response?.data?.message || error.message,
       error.response?.data
     );
   }
